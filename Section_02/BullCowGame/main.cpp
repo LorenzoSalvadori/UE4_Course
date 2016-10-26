@@ -6,16 +6,20 @@ void PrintIntro();
 void PlayGame();
 std::string GetGuess();
 bool AskToPlayAgain();
+
 FBullCowGame BCGame; // instantiate a new game
 
 // the entry point for our application
 int main()
 {
+	bool bPlayAgain = false;
 	do {
 		PrintIntro();
 		PlayGame();
+		//TODO  add a game summary
+		bPlayAgain = AskToPlayAgain();
 	}
-	while (AskToPlayAgain());
+	while (bPlayAgain);
 
 	return 0; // exit the application
 }
@@ -54,14 +58,23 @@ bool AskToPlayAgain()
 
 void PlayGame() 
 {
+	BCGame.Reset();
 	int MaxTries = BCGame.GetMaxTries();
 	std::cout << MaxTries << std::endl;
 	
+	//TODO change from FOR to WHILE loop once we are validating tries
 	for (int i = 0; i < MaxTries; i++)
 	{
-		std::string Guess = GetGuess();
+		std::string Guess = GetGuess(); //TODO make loop check valid guess
+		
+		//submit valid guess to the game
+		//print number of bulls and cows
+
 		std::cout << "Your guess was: " << Guess << std::endl;
 		std::cout << std::endl;
 	}
+
+	//TODO summarise game
+
 	return;
 }
