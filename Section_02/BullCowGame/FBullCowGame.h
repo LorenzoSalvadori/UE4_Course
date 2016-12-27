@@ -4,6 +4,7 @@
 using FString = std::string;
 using int32 = int;
 
+
 struct FBullCowCount
 {
 	int32 Bulls = 0;
@@ -42,4 +43,7 @@ private:
 	int32 MyMaxTries;
 	FString MyHiddenWord;
 	bool bGameIsWon;
+
+	bool IsIsogram(FString) const;
+	bool IsLowerCase(FString) const;
 };
