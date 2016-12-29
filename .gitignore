@@ -1,0 +1,14 @@
+#################################
+# Unreal Generated Ignore Files #
+#################################
+**/Binaries
+**/Build
+**/DerivedDataCache
+**/Intermediate
+**/Saved
+Section_03/BuildingEscape/Content/StarterContent/
+
+#############################
+# VS Generated Ignore Files #
+#############################
+**.VC.db
